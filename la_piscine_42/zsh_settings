@@ -1,0 +1,11 @@
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias nnt='norminette .'
+alias nntr='norminette -R CheckForbiddenSourceHeader'
+alias mnt='gcc -Wall -Wextra -Werror -o test.out'
+
+alias lh='ls -lh'
+alias la='ls -al'
