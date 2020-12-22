@@ -1,6 +1,6 @@
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, char *src, unsigned int n)
+char				*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
 	int				check;
@@ -11,12 +11,12 @@ char	*ft_strncpy(char *dst, char *src, unsigned int n)
 	{
 		if (check == 1 || src[i] == '\0')
 		{
-			dst[i] = '\0';
+			dest[i] = '\0';
 			check = 1;
 		}
 		else
-			dst[i] = src[i];
+			dest[i] = src[i];
 		i++;
 	}
-	return (dst);
+	return (dest);
 }
