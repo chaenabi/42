@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/22 22:54:43 by mylee             #+#    #+#             */
+/*   Updated: 2020/12/22 22:54:53 by mylee            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char        *ft_strnstr(const char *big, const char *little, size_t len)
+char		*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t l_len;
-	size_t b_len;
-	size_t size;
+	size_t	l_len;
+	size_t	b_len;
+	size_t	size;
 
 	if (*little == '\0')
 		return ((char *)big);
