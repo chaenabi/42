@@ -6,22 +6,22 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 17:14:03 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/21 17:59:29 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/22 23:46:04 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(char c)
+static	int		ft_isspace(char c)
 {
 	return ((c == 32) || (c >= 9 && c <= 13));
 }
 
-int		ft_atoi(const char *nptr)
+int				ft_atoi(const char *nptr)
 {
-	int	flag;
-	int	result;
-	int	i;
+	int			flag;
+	int			result;
+	int			i;
 
 	i = 0;
 	flag = 0;
