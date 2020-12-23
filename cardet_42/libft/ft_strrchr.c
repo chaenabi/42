@@ -6,7 +6,7 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 22:54:08 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/22 22:54:21 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/23 23:55:48 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char		*ft_strrchr(const char *s, int c)
 	size_t	i;
 	char	*result;
 	char	find;
-	
+
 	result = (char *)s;
 	find = (char)c;
 	i = ft_strlen(s);
