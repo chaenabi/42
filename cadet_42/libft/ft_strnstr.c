@@ -22,7 +22,7 @@ char		*ft_strnstr(const char *big, const char *little, size_t len)
 	while (*big != '\0' && len-- >= little_len)
 	{
 		if (*big == *little
-			&& ft_strncmp((char *)big, (char *)little, little_len) == 0)
+			&& ft_strncmp(big, little, little_len) == 0)
 			return ((char *)big);
 		big++;
 	}
