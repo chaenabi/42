@@ -39,7 +39,8 @@ SOURCES = ./ft_memset.c \
 		  ./ft_putstr_fd.c \
 		  ./ft_putendl_fd.c \
 		  ./ft_putnbr_fd.c \
-
+		  ./ft_putstr.c \
+		  ./ft_putchar.c \
 OBJECTS = $(SOURCES:.c=.o)
 
 all: $(TARGET)
