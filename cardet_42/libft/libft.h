@@ -6,7 +6,7 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 17:24:52 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/23 00:11:17 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/27 00:14:32 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char				*ft_substr(char const *s, unsigned int start,
 								size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
-char				**ft_split(char *str, char *sep);
+char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s,
 								char (*f)(unsigned int, char));
@@ -61,7 +61,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_putchar(char c);
+void				ft_putchar(size_t c);
 void				ft_putstr(char *str);
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
