@@ -6,7 +6,7 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 23:35:03 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/26 23:35:05 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/27 01:17:54 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == NULL || del == NULL)
-		return;
-	del(lst->content);
-	free(lst);
+	if (lst != NULL && del != NULL)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }
