@@ -37,3 +37,5 @@ bonus: $(OBJECTS) $(BONUS_OBJS)
 	ar cr $(NAME) $^
 
 re: fclean all
+
+.PHONY: clean fclean all re
