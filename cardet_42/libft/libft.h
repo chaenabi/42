@@ -6,7 +6,7 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 00:40:51 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/27 01:08:55 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/29 01:05:23 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strcpy(char *dest, char *src);
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
-size_t				ft_strlcpy(char *dest, const char *src, size_t size);
+size_t				ft_strlcpy(char *dest, char const *src, size_t size);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);

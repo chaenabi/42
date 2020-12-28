@@ -6,13 +6,13 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 22:58:30 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/27 00:57:33 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/29 01:05:06 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t				ft_strlcpy(char *dest, const char *src, size_t size)
+size_t				ft_strlcpy(char *dest, char const *src, size_t size)
 {
 	size_t			i;
 
