@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -c
 
-TARGET = libft.a
+NAME = libft.a
 SOURCES = ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 		ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
 		ft_itoa.c ft_memcpy.c  ft_putendl_fd.c ft_strchr.c  ft_strlcpy.c \
@@ -18,21 +18,21 @@ BONUS =	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
 
 BONUS_OBJECTS = $(BONUS:.c=.o)
 
-all: $(TARGET)
+all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 	
-$(TARGET): $(OBJECTS)
+$(NAME): $(OBJECTS)
 	ar cr $@ $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
 bonus: $(OBJECTS) $(BONUS_OBJS)
-	ar cr $(TARGET) $^
+	ar cr $(NAME) $^
 
 re: fclean all
