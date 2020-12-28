@@ -6,13 +6,13 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 23:36:36 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/27 00:13:55 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/28 10:33:38 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar(size_t c)
+void	ft_putchar(size_t c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }

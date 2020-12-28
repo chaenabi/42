@@ -6,29 +6,29 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 23:33:05 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/27 00:57:34 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/28 10:29:32 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    size_t  s_len;
-    size_t  i;
-    char    *result;
+	size_t	s_len;
+	size_t	i;
+	char	*result;
 
-    i = 0;
-    if (*s == '\0')
-        return (NULL);
-    s_len = ft_strlen(s);
-    if (!(result = (char *)malloc(sizeof(char) * (s_len + 1))))
-        return (NULL);
-    while (i < s_len)
-    {
-        result[i] = f(i, s[i]);
-        i++;
-    }
-    result[i] = '\0';
-    return (result);
+	i = 0;
+	if (*s == '\0')
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (!(result = (char *)malloc(sizeof(char) * (s_len + 1))))
+		return (NULL);
+	while (i < s_len)
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }

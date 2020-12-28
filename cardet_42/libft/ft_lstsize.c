@@ -6,15 +6,15 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 23:34:25 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/26 23:34:28 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/28 10:34:41 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int		ft_lstsize(t_list *lst)
 {
-	int size;
+	int	size;
 
 	size = 0;
 	while (lst != NULL)

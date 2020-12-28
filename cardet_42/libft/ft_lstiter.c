@@ -6,7 +6,7 @@
 /*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 23:35:20 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/26 23:35:21 by mylee            ###   ########.fr       */
+/*   Updated: 2020/12/28 10:35:08 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst == NULL || f == NULL)
-		return;
+		return ;
 	while (lst)
 	{
 		f(lst->content);
