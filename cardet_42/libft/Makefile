@@ -28,12 +28,12 @@ $(NAME): $(OBJECTS)
 	ar cr $@ $(OBJECTS)
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(BONUS_OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
 
-bonus: $(OBJECTS) $(BONUS_OBJS)
+bonus: $(OBJECTS) $(BONUS_OBJECTS)
 	ar cr $(NAME) $^
 
 re: fclean all
