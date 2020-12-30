@@ -3,42 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: jinbekim <jinbekim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/21 17:14:03 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/29 00:02:25 by mylee            ###   ########.fr       */
+/*   Created: 2020/12/21 22:35:34 by jinbekim          #+#    #+#             */
+/*   Updated: 2020/12/28 22:17:55 by jinbekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		ft_isspace(char c)
+static	int	ft_isspace(int c)
 {
-	return ((c == 32) || (c >= 9 && c <= 13));
+	if ((9 <= c && c <= 13) || c == 32)
+		return (1);
+	return (0);
 }
 
-int				ft_atoi(const char *nptr)
+int			ft_atoi(const	char *s)
 {
-	int			flag;
-	int			result;
-	int			i;
+	size_t	i;
+	int		c;
+	int		neg;
 
 	i = 0;
-	flag = 1;
-	while (nptr[i] && ft_isspace(nptr[i]))
+	c = 0;
+	neg = 1;
+	while (ft_isspace(s[i]))
 		i++;
-	if (nptr[i] == '-')
-		flag = -1;
-	if (nptr[i] == '-' || nptr[i] == '+')
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-		return (0);
-	result = 0;
-	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
+	if (s[i] == '-' || s[i] == '+')
 	{
-		result = 10 * result + (nptr[i++] - '0');
+		if (s[i] == '-')
+			neg = -1;
+		i++;
 	}
-	if (flag == -1)
-		result = -result;
-	return (result);
+	while (ft_isdigit(s[i]))
+	{
+		if (c > 0 && neg < 0)
+			return (0);
+		if (c < 0 && neg > 0)
+			return (-1);
+		c = (c * 10) + neg * (s[i] - '0');
+		i++;
+	}
+	return (c);
 }

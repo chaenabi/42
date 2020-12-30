@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: jinbekim <jinbekim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/26 23:31:45 by mylee             #+#    #+#             */
-/*   Updated: 2020/12/30 22:48:39 by mylee            ###   ########.fr       */
+/*   Created: 2020/12/23 20:48:51 by jinbekim          #+#    #+#             */
+/*   Updated: 2020/12/28 01:03:48 by jinbekim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	sub_str[len + 1];
+	char	*arr;
+	size_t	i;
 
-	if (!s)
-		return (NULL);
+	i = 0;
 	if (ft_strlen(s) <= start)
 		return (ft_strdup(""));
-	ft_strlcpy(sub_str, s + start, len + 1);
-	return (ft_strdup(sub_str));
+	if (!(arr = malloc(len + 1)))
+		return (0);
+	while ((i < len) && s[i + start])
+	{
+		arr[i] = s[i + start];
+		i++;
+	}
+	arr[i] = 0;
+	return (arr);
 }
