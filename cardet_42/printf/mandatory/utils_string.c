@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   utils_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smun <smun@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: mylee <mylee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/02 13:14:36 by smun              #+#    #+#             */
-/*   Updated: 2021/01/02 19:57:44 by smun             ###   ########.fr       */
+/*   Created: 2021/02/14 14:57:32 by mylee             #+#    #+#             */
+/*   Updated: 2021/02/16 01:19:45 by mylee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "ft_printf.h"
 #include <stdlib.h>
 
